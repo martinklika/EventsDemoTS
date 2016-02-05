@@ -6,11 +6,16 @@
         vm.testFunction()
     </button>
     <div>
-        Elemenent [4] from array of events = {{vm.events[4]}}
+        vm.events[0] = {{vm.events[0]}}
     </div>
-    <button type="button" class="btn btn-primary" ng-click="vm.testOuterFunction(vm.events[4])">
-        vm.testOuterFunction(vm.events[4])
+    <button type="button" class="btn btn-primary" ng-click="vm.testOuterFunction(vm.events[0])">
+        vm.testOuterFunction(vm.events[0])
     </button>
+    <br>
+    <button type="button" class="btn btn-primary" ng-click="vm.testOuterSetName(vm.events[0])">
+        vm.testOuterSetName(vm.events[0])
+    </button>
+    - this should call setName() model and set name to "New name..."
     <hr/>
 
     <h3 style="color: red;">This section is testing ng-repeat. First <span style="color: green;">without directive</span> then <span style="color: blue;"> with directive</span></h3>

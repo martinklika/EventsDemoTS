@@ -65,6 +65,10 @@ var app;
                 myEvent.testEvent();
                 console.log('testOuterFunction');
             };
+            EventListController.prototype.testOuterSetName = function (myEvent) {
+                myEvent.setName('NEW NAME FROM OUTER FUNCTION');
+                console.log('testOuterFunction');
+            };
             return EventListController;
         })();
         angular

@@ -74,6 +74,11 @@ module app.eventList {
             myEvent.testEvent();
             console.log('testOuterFunction');
         }
+        
+        testOuterSetName(myEvent: app.common.models.IMyEvent): void {
+            myEvent.setName('NEW NAME FROM OUTER FUNCTION');
+            console.log('testOuterFunction');
+        }
     }
 
     angular
