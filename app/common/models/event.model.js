@@ -7,6 +7,7 @@ var app;
             'use strict';
             var MyEvent = (function () {
                 function MyEvent(id, name, date, time) {
+                    this.id = id;
                     this.name = name;
                     this.date = date;
                     this.time = time;
@@ -17,9 +18,11 @@ var app;
                     console.log('testEvent called');
                 };
                 MyEvent.prototype.setName = function (text) {
-                    console.log('old name is: ' + this.name);
+                    console.log('old this is: ', this);
+                    console.log('old name is: ', this.name);
                     this.name = text;
-                    console.log('new name is: ' + this.name);
+                    console.log('new this is: ', this);
+                    console.log('new name is: ', this.name);
                 };
                 return MyEvent;
             })();

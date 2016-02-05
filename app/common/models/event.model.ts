@@ -23,6 +23,7 @@ module app.common.models {
                     name: string,
                     date: Date,
                     time: string) {
+            this.id = id;
             this.name = name;
             this.date = date;
             this.time = time;
@@ -36,9 +37,11 @@ module app.common.models {
         }
         
         setName(text: string): void {
-            console.log('old name is: ' + this.name);
+            console.log('old this is: ', this);
+            console.log('old name is: ', this.name);
             this.name = text;
-            console.log('new name is: ' + this.name);
+            console.log('new this is: ', this);
+            console.log('new name is: ', this.name);
         }
     }
 }
