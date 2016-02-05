@@ -66,7 +66,7 @@ var app;
                 console.log('testOuterFunction');
             };
             EventListController.prototype.testOuterSetName = function (myEvent) {
-                myEvent.setName('NEW NAME FROM OUTER FUNCTION');
+                myEvent.setName();
                 console.log('testOuterFunction');
             };
             return EventListController;

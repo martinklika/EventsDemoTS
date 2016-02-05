@@ -1,24 +1,22 @@
-<a href="event/{{vmThumb.id}}">
-    <div class="well hoverwell">
-        <div class="row">
-            <h2 class="span6">{{vmThumb.name}}</h2></div>
-        <div class="row"><span class="span1">Date:</span>
-            <span>{{vmThumb.date}}</span>
-        </div>
-        <div class="row"><span class="span1">Time:</span>
-            <span>{{vmThumb.time}}</span>
-        </div>
-        <div class="row"><span class="span1">Location:</span>
-            <span>{{vmThumb.address.street}}</span>
-        </div>
-        <div class="row"><span class="span1">&nbsp;</span>
-            <span>{{vmThumb.address.city}}, {{vmThumb.address.country}}</span>
-        </div>
-        <button type="button" class="btn btn-primary" ng-click="vmThumb.testEvent()">
-            vmThumb.testEvent()
-        </button>
-        <button type="button" class="btn btn-primary" ng-click="vmThumb.setName('pretty new name')">
-            vmThumb.setName('pretty new name')
-        </button>
+<div class="well hoverwell">
+    <div class="row">
+        <h2 class="span6">{{vmThumb.name}}</h2></div>
+    <div class="row"><span class="span1">Date:</span>
+        <span>{{vmThumb.date}}</span>
     </div>
-</a>
+    <div class="row"><span class="span1">Time:</span>
+        <span>{{vmThumb.time}}</span>
+    </div>
+    <div class="row"><span class="span1">Location:</span>
+        <span>{{vmThumb.address.street}}</span>
+    </div>
+    <div class="row"><span class="span1">&nbsp;</span>
+        <span>{{vmThumb.address.city}}, {{vmThumb.address.country}}</span>
+    </div>
+    <button type="button" class="btn btn-primary" ng-click="vmThumb.testEvent()">
+        vmThumb.testEvent()
+    </button>
+    <button type="button" class="btn btn-primary" ng-click="vmThumb.setName()">
+        vmThumb.setName()
+    </button>
+</div>

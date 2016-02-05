@@ -17,10 +17,10 @@ var app;
                 MyEvent.prototype.testEvent = function () {
                     console.log('testEvent called');
                 };
-                MyEvent.prototype.setName = function (text) {
+                MyEvent.prototype.setName = function () {
                     console.log('old this is: ', this);
                     console.log('old name is: ', this.name);
-                    this.name = text;
+                    this.name = 'pretty new name';
                     console.log('new this is: ', this);
                     console.log('new name is: ', this.name);
                 };
