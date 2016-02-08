@@ -1,4 +1,8 @@
 <div class="well hoverwell">
+    <button type="button" class="btn btn-primary" ng-click="vmThumb2()">
+        testing directive & vmThumb2()
+    </button>
+    
     <div class="row">
         <h2 class="span6">{{vmThumb.name}}</h2></div>
     <div class="row"><span class="span1">Date:</span>
@@ -16,7 +20,21 @@
     <button type="button" class="btn btn-primary" ng-click="vmThumb.testEvent()">
         vmThumb.testEvent()
     </button>
-    <button type="button" class="btn btn-primary" ng-click="vmThumb.setName()">
-        vmThumb.setName()
+    <button type="button" class="btn btn-primary" ng-click="vmThumb.setName('LALALA')">
+        vmThumb.setName('LALALA')
     </button>
+   
+    <form name="form" ng-submit="vmThumb.setName(vmThumb.newName)" role="form">
+        <input type="text" name="username" id="username" class="form-control" ng-model="vmThumb.newName" placeholder="Username" required />
+
+        <!--ng-disabled="form.$invalid || vm.dataLoading"-->
+        <button type="submit" class="btn btn-login btn-block btn-flat">setName</button>
+    </form>
+    <!--<form name="form" ng-submit="vmThumb.setName(vmThumb.name)" role="form">
+        <input type="text" name="username" id="username" class="form-control" ng-model="vmThumb.name" placeholder="Username" required />
+
+        <!--ng-disabled="form.$invalid || vm.dataLoading"-->
+        <!--<button type="submit" class="btn btn-login btn-block btn-flat">setName</button>
+    </form>    -->
+    <br/>
 </div>

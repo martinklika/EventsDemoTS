@@ -9,7 +9,7 @@ module app.common.models {
         address?: app.common.models.IAddress;
         modifyName?(): void;
         testEvent?(): void;
-        setName?(): void;
+        setName?(name: string): void;
     }
 
     export class MyEvent implements IMyEvent {
@@ -36,12 +36,8 @@ module app.common.models {
             console.log('testEvent called');
         }
         
-        setName(): void {
-            console.log('old this is: ', this);
-            console.log('old name is: ', this.name);
-            this.name = 'pretty new name';
-            console.log('new this is: ', this);
-            console.log('new name is: ', this.name);
+        setName(name: string): void {
+            this.name = name;
         }
     }
 }

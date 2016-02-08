@@ -76,7 +76,7 @@ module app.eventList {
         }
         
         testOuterSetName(myEvent: app.common.models.IMyEvent): void {
-            myEvent.setName();
+            myEvent.setName('NEW NAME');
             console.log('testOuterFunction');
         }
     }

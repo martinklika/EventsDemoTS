@@ -18,6 +18,7 @@ module app.directives.eventThumbnail {
                 // that is represented by the event attribute on the directive
                 vmThumb: '=myEvent', // will be named my-event (!) in html file
                 // 'somestuff': '&myEvent2'
+                vmThumb2: '&'
             }
         };
     }

@@ -1,6 +1,6 @@
 <div>
     <h3 style="color: red;">This section is testing EventList</h3>
-    
+
     <h4>vm.categoryName = {{vm.categoryName}}</h4>
     <button type="button" class="btn btn-primary" ng-click="vm.testFunction()">
         vm.testFunction()
@@ -15,24 +15,23 @@
     <button type="button" class="btn btn-primary" ng-click="vm.testOuterSetName(vm.events[0])">
         vm.testOuterSetName(vm.events[0])
     </button>
-    - this should call setName() model and set name to 'pretty new name'
+    - this should call setName() model and set name to 'new name'
     <hr/>
 
     <h3 style="color: red;">This section is testing ng-repeat. First <span style="color: green;">without directive</span> then <span style="color: blue;"> with directive</span></h3>
-    
+
     <ul class="thumbnails">
         <!--<li ng-repeat="event in events | orderBy:sortorder" class="span5">-->
         <li ng-repeat="event in vm.events" class="span5">
-            
+
             <h4 style="color: green;">No directive:</h4>
             <h4>event.name = {{event.name}}</h4>
             <button type="button" class="btn btn-primary" ng-click="vm.testOuterFunction(event)">
                 vm.testOuterFunction(event)
             </button>
             <br/>
-            
             <h4 style="color: blue;">Directive:</h4>
-            <event-thumbnail my-event="event" />
+            <event-thumbnail my-event="event" vmThumb2="testFunction()"/>
         </li>
     </ul>
 </div>

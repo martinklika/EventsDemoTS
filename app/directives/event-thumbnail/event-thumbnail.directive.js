@@ -19,6 +19,8 @@ var app;
                         // I want the event on the scope to be set to the object
                         // that is represented by the event attribute on the directive
                         vmThumb: '=myEvent',
+                        // 'somestuff': '&myEvent2'
+                        vmThumb2: '&'
                     }
                 };
             }
