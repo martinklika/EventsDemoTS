@@ -5,6 +5,7 @@
         'ngResource',
         'app.eventList',
         'app.directives.eventThumbnail',
+        'app.directives.eventThumbnailButtons',
         'app.productList'
     ]);
 })();

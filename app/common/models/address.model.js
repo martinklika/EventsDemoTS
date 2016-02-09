@@ -26,6 +26,11 @@ var app;
                 Address.prototype.testFunction = function () {
                     console.log('Test Function called');
                 };
+                Address.prototype.setAddress = function (street, city, country) {
+                    this.street = street;
+                    this.city = city;
+                    this.country = country;
+                };
                 return Address;
             })();
             models.Address = Address;

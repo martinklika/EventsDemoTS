@@ -11,73 +11,40 @@ module app.eventList {
         events: app.common.models.IMyEvent[];
 
         constructor() {
-            this.categoryName = 'Category Name';
+            this.categoryName = 'List of Events';
             this.events = [];
-            // this.events = [
-            //     {
-            //         'id': 1,
-            //         'name': 'Some Event 1',
-            //         'date': new Date(2013, 1, 1, 10, 30, 0),
-            //         'time': '10:30 am',
-            //         'address': {
-            //             'street': 'Some Address no. 1',
-            //             'city': 'City One',
-            //             'country': 'USA'
-            //         }
-            //     },
-            //     {
-            //         'id': 2,
-            //         'name': 'Second Event',
-            //         'date': new Date(2013, 3, 15, 9, 0, 0),
-            //         'time': '9:00am - 5:00pm',
-            //         'address': {
-            //             'street': 'Some Address no. 222',
-            //             'city': 'City Two',
-            //             'country': 'Canada'
-            //         }
-            //     },
-            //     {
-            //         'id': 3,
-            //         'name': 'Event 333333',
-            //         'date': new Date(2013, 3, 16, 8, 0, 0),
-            //         'time': '8:00am - 4:30pm',
-            //         'address': {
-            //             'street': 'Some Address no. 333',
-            //             'city': 'City Three',
-            //             'country': 'Canada'
-            //         }
-            //     },
-            //     {
-            //         'id': 4,
-            //         'name': 'Fourth event',
-            //         'date': new Date(2010, 1, 1, 10, 0, 0),
-            //         'time': '10:00am',
-            //         'address': {
-            //             'street': 'Some Address no. 444',
-            //             'city': 'City 4',
-            //             'country': 'USA'
-            //         }
-            //     }
-            // ];
-            var myEvent5: app.common.models.IMyEvent = new app.common.models.MyEvent(
-                5, 'Fifth event', new Date(2020, 2, 2, 22, 22, 22), '8am');
-            // myEvent5.setName('I just set name to Event5');
-            // myEvent5.testEvent();
-            this.events.push(myEvent5);
-        }
 
-        testFunction(): void {
-            console.log('TEST FUNCTION in list ctrl');
-        }
-        
-        testOuterFunction(myEvent: app.common.models.IMyEvent): void {
-            myEvent.testEvent();
-            console.log('testOuterFunction');
+            var myEvent1: app.common.models.IMyEvent = new app.common.models.MyEvent(
+                5, 'Some Event 1', new Date(2020, 4, 4, 22, 22, 22), '8am');
+            var myEvent2: app.common.models.IMyEvent = new app.common.models.MyEvent(
+                5, 'Second event', new Date(2016, 3, 2, 11, 22, 22), '8am');
+            var myEvent3: app.common.models.IMyEvent = new app.common.models.MyEvent(
+                5, 'Another event 3', new Date(2017, 11, 10, 10, 0, 0), '8am');
+            var myEvent4: app.common.models.IMyEvent = new app.common.models.MyEvent(
+                5, '4th event', new Date(2016, 2, 2, 22, 0, 0), '8am');
+            var myEvent5: app.common.models.IMyEvent = new app.common.models.MyEvent(
+                5, 'Fifth event', new Date(2020, 3, 22, 10, 0, 0), '8am');
+                
+            myEvent1.setAddress('Some Address no. 1', 'New York', 'USA');
+            myEvent2.setAddress('Second Avenue 2', 'New York', 'USA');
+            myEvent3.setAddress('Some Address no. 3', 'New York', 'USA');
+            myEvent4.setAddress('4th Road', 'New York', 'USA');
+            myEvent5.setAddress('555 Fifth Avenue', 'New York', 'USA');
+            
+            this.events.push(myEvent1);
+            this.events.push(myEvent2);
+            this.events.push(myEvent3);
+            this.events.push(myEvent4);
+            this.events.push(myEvent5);
         }
         
         testOuterSetName(myEvent: app.common.models.IMyEvent): void {
-            myEvent.setName('NEW NAME');
+            myEvent.setName('New Name');
             console.log('testOuterFunction');
+        }
+        
+        callHome(): void {
+            console.log('CALL HOME');
         }
     }
 

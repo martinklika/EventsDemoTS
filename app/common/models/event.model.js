@@ -12,13 +12,11 @@ var app;
                     this.date = date;
                     this.time = time;
                 }
-                // constructor() {
-                // }
-                MyEvent.prototype.testEvent = function () {
-                    console.log('testEvent called');
-                };
                 MyEvent.prototype.setName = function (name) {
                     this.name = name;
+                };
+                MyEvent.prototype.setAddress = function (street, city, country) {
+                    this.address = new models.Address(street, city, country);
                 };
                 return MyEvent;
             })();

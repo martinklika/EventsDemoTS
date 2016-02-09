@@ -83,3 +83,21 @@ select, textarea {
 .blue {
     color: blue;
 }
+
+.nodata {
+    color: DarkSlateGrey;
+}
+
+.nodata2 {
+    color: SteelBlue;
+}
+
+hr {
+    border-top: solid 1px #ffffff;
+}
+
+input[type="text"] {
+    background-color:#666666;
+    color: lightgrey;
+    border-color: black;
+}

@@ -1,0 +1,36 @@
+<div>
+    <button type="button" class="btn nodata2" ng-click="vmThumb.setName('Hardcoded')">
+        vmThumb.setName('Hardcoded')
+    </button>
+    <span class="nodata2">
+        - button calling in model to set name to 'Hardcoded'
+    </span>
+    <br>
+    <br>
+
+    <button type="button" class="btn nodata2" ng-click="vmThumbAmpersand()">
+        vmThumbAmpersand()
+    </button>
+    <span class="nodata2">
+        - button invoking a method within the scope of the directive
+    </span>
+    <br>
+    <br>
+
+    <input type="text" class="form-control" ng-model="vmThumb.name" placeholder="name" required />
+    <span class="nodata2">
+        - input two-way binded with event model's name attribute
+    </span>
+    <br>
+
+    <form name="form" ng-submit="vmThumb.setName(newName)" role="form">
+        <input type="text" class="form-control" ng-model="newName" placeholder="name" required/>
+        <button type="submit" class="btn nodata2">setName</button>
+        <span class="nodata2">
+            - button calling in model to set name
+    	</span>
+    </form>
+    <br>
+
+    <!--ng-disabled="form.$invalid || vm.dataLoading"-->
+</div>

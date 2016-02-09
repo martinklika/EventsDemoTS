@@ -7,9 +7,8 @@ module app.common.models {
         date: Date;
         time: string;
         address?: app.common.models.IAddress;
-        modifyName?(): void;
-        testEvent?(): void;
-        setName?(name: string): void;
+        setName(name: string): void;
+        setAddress(street: string, city: string, country: string): void
     }
 
     export class MyEvent implements IMyEvent {
@@ -20,24 +19,21 @@ module app.common.models {
         address: app.common.models.IAddress;
 
         constructor(id: number,
-                    name: string,
-                    date: Date,
-                    time: string) {
+            name: string,
+            date: Date,
+            time: string) {
             this.id = id;
             this.name = name;
             this.date = date;
             this.time = time;
         }
-        
-        // constructor() {
-        // }
-        
-        testEvent(): void {
-            console.log('testEvent called');
-        }
-        
+
         setName(name: string): void {
             this.name = name;
+        }
+
+        setAddress(street: string, city: string, country: string): void {
+            this.address = new Address(street, city, country);
         }
     }
 }

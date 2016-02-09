@@ -1,37 +1,23 @@
-<div>
-    <h3 style="color: red;">This section is testing EventList</h3>
-
-    <h4>vm.categoryName = {{vm.categoryName}}</h4>
-    <button type="button" class="btn btn-primary" ng-click="vm.testFunction()">
-        vm.testFunction()
-    </button>
-    <div>
-        vm.events[0] = {{vm.events[0]}}
-    </div>
-    <button type="button" class="btn btn-primary" ng-click="vm.testOuterFunction(vm.events[0])">
-        vm.testOuterFunction(vm.events[0])
-    </button>
-    <br>
-    <button type="button" class="btn btn-primary" ng-click="vm.testOuterSetName(vm.events[0])">
-        vm.testOuterSetName(vm.events[0])
-    </button>
-    - this should call setName() model and set name to 'new name'
-    <hr/>
-
-    <h3 style="color: red;">This section is testing ng-repeat. First <span style="color: green;">without directive</span> then <span style="color: blue;"> with directive</span></h3>
-
-    <ul class="thumbnails">
-        <!--<li ng-repeat="event in events | orderBy:sortorder" class="span5">-->
-        <li ng-repeat="event in vm.events" class="span5">
-
-            <h4 style="color: green;">No directive:</h4>
-            <h4>event.name = {{event.name}}</h4>
-            <button type="button" class="btn btn-primary" ng-click="vm.testOuterFunction(event)">
-                vm.testOuterFunction(event)
-            </button>
+<div class="well">
+    <div class="row">
+        <div class="span12">
+            <h3><span class="nodata2">Name:</span> {{vm.categoryName}}</h3>
+            <div>
+                <span class="nodata2">Test: data from the first event:</span> {{vm.events[0]}}
+            </div>
             <br/>
-            <h4 style="color: blue;">Directive:</h4>
-            <event-thumbnail my-event="event" vmThumb2="testFunction()"/>
-        </li>
-    </ul>
+            <button type="button" class="btn nodata2" ng-click="vm.testOuterSetName(vm.events[0])">
+                vm.testOuterSetName(vm.events[0])
+            </button>
+            <span class="nodata2">
+                - button calling func. in list that calls func. in model to set name of event[0] to 'New Name'
+            </span>
+        </div>
+    </div>
+    <hr>
+
+    <div ng-repeat="event in vm.events">
+        <event-thumbnail my-event="event" vm-thumb-ampersand="vm.callHome()"></event-thumbnail>
+    </div>
+
 </div>

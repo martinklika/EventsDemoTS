@@ -1,9 +1,9 @@
 Training app to learn and test AngularJS (using TypeScript, OOP-like approach, controllerAs instead of $scope).
 
 1. Download simple server http-server (https://www.npmjs.com/package/http-server), e.g. with npm:
-"npm install http-server –g"
-2. Run it with command "http-server" (uses port 8000 by default), or "http-server –p 8888" (user defined port).
-3. In broswer, go to localhost:8000 (or whatever port).
+<br>"npm install http-server –g"
+2. Run it with command "http-server" (uses port 8000 by default), or "http-server –p 1234" (or whatever user defined port).
+3. In browser, go to localhost:8000 (or whatever port).
 
 Changes to the code:
 - Change only TS files and compile them.

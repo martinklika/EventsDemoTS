@@ -7,6 +7,7 @@ module app.common.models {
         country: string;
         showFlag?(): string;
         testFunction?(): void;
+        setAddress(street: string, city: string, country: string): void;
     }
 
     export class Address implements IAddress {
@@ -30,6 +31,12 @@ module app.common.models {
         
         testFunction(): void {
             console.log('Test Function called');
+        }
+        
+        setAddress(street: string, city: string, country: string): void {
+            this.street = street;
+            this.city = city;
+            this.country = country;
         }
     }
 }
