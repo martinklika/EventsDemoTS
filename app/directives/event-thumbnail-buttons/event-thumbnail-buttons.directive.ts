@@ -14,8 +14,8 @@ module app.directives.eventThumbnailButtons {
             replace: true,
             templateUrl: 'app/directives/event-thumbnail-buttons/event-thumbnail-buttons.html',
             scope: {
-                vmThumb: '=myEvent', // will be named my-event (!) in html file
-                vmThumbAmpersand: '&' // will be named vm-thumb-ampersand (!) in html file
+                vmThumbButtons: '=myEventButtons',
+                vmThumbButtonsAmpersand: '&'
             }
         };
     }

@@ -3,11 +3,13 @@ module app.eventList {
 
     interface IEventList {
         categoryName: string;
+        callHomeCounter?: number;
         events?: app.common.models.IMyEvent[];
     }
 
     class EventListController implements IEventList {
         categoryName: string;
+        callHomeCounter: number;
         events: app.common.models.IMyEvent[];
 
         constructor() {
@@ -44,7 +46,8 @@ module app.eventList {
         }
         
         callHome(): void {
-            console.log('CALL HOME');
+            this.callHomeCounter++;
+            console.log('CALL HOME ' + this.callHomeCounter + '-times');
         }
     }
 

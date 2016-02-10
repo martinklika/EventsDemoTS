@@ -12,12 +12,7 @@ var app;
             controller: 'EventListController',
             controllerAs: 'vm'
         })
-            .when('/aaa', {
-            templateUrl: '/app/event-list/event-list.1.html',
-            controller: 'EventListController',
-            controllerAs: 'vm'
-        })
-            .when('/bbb', {
+            .when('/products', {
             templateUrl: 'app/product-list/product-list.html',
             controller: 'ProductListController',
             controllerAs: 'vm'

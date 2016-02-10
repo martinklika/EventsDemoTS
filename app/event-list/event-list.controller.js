@@ -28,7 +28,8 @@ var app;
                 console.log('testOuterFunction');
             };
             EventListController.prototype.callHome = function () {
-                console.log('CALL HOME');
+                this.callHomeCounter++;
+                console.log('CALL HOME ' + this.callHomeCounter + '-times');
             };
             return EventListController;
         })();
