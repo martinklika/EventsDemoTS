@@ -14,6 +14,7 @@ module app.eventList {
 
         constructor() {
             this.categoryName = 'List of Events';
+            this.callHomeCounter = 0;
             this.events = [];
 
             var myEvent1: app.common.models.IMyEvent = new app.common.models.MyEvent(
