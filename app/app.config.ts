@@ -1,14 +1,14 @@
 module app {
     'use strict';
 
-    angular.module('eventManagementSystem').config(config);
+    angular.module('eventManagementSystem').config(routeConfig);
 
-    config.$inject = [
+    routeConfig.$inject = [
         '$routeProvider', 
         '$locationProvider'
     ];
 
-    function config($routeProvider: ng.route.IRouteProvider, $locationProvider: ng.ILocationProvider): void {
+    function routeConfig($routeProvider: ng.route.IRouteProvider, $locationProvider: ng.ILocationProvider): void {
         $routeProvider.when('/', {
             templateUrl: '/app/event-list/event-list.html',
             controller: 'EventListController',

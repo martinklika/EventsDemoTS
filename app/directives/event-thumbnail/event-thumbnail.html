@@ -4,9 +4,10 @@
         <span class="nodata">Date: </span> {{vmThumb.date | date:'EEEE dd/MMMM/yyyy'}}
         <span class="nodata">, Time: </span> {{vmThumb.date | date:'@ h:mma'}}
         <span class="nodata">, Location: </span> {{vmThumb.address.street}}, {{vmThumb.address.city}}, {{vmThumb.address.country}}
+        <img ng-src="{{vmThumb.address.country | showFlag}}" style="width: 30px; height: 20px" />
     </div>
     <br>
-    
+
     <!-- Directive within directive -->
     <event-thumbnail-buttons my-event-buttons="vmThumb" vm-thumb-buttons-ampersand="vmThumbAmpersand()"></event-thumbnail-buttons>
 

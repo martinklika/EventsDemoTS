@@ -1,13 +1,13 @@
 module app.eventNew {
     'use strict';
 
-    angular.module('app.eventNew').config(config);
+    angular.module('app.eventNew').config(routeConfig);
 
-    config.$inject = [
+    routeConfig.$inject = [
         '$routeProvider'
     ];
 
-    function config($routeProvider: angular.route.IRouteProvider): void {
+    function routeConfig($routeProvider: angular.route.IRouteProvider): void {
         $routeProvider.when('/event-new', {
             templateUrl: 'app/event-new/event-new.html',
             controller: 'EventNewController',
