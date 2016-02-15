@@ -7,7 +7,6 @@ module app.common.models {
     }
 
     export class Product implements IProduct {
-
         constructor(public name: string) {
         }
 

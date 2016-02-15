@@ -9,7 +9,7 @@ module app.eventList {
 
     function config($routeProvider: angular.route.IRouteProvider): void {
         $routeProvider.when('/xxx', {
-            templateUrl: 'app/event-list/event-list.2.html',
+            templateUrl: 'app/event-list/event-list.html',
             controller: 'EventListController',
             controllerAs: 'vm'
         });

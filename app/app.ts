@@ -5,6 +5,7 @@
         'ngRoute',
         'ngResource',
         'app.eventList',
+        'app.eventNew',
         'app.directives.eventThumbnail',
         'app.directives.eventThumbnailButtons',
         'app.productList'

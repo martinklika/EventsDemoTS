@@ -11,7 +11,6 @@ module app.common.models {
     }
 
     export class Address implements IAddress {
-
         constructor(public street: string, public city: string, public country: string) {
         }
         
