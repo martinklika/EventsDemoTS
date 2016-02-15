@@ -18,15 +18,15 @@ module app.eventList {
             this.events = [];
 
             var myEvent1: app.common.models.IMyEvent = new app.common.models.MyEvent(
-                5, 'Some Event 1', new Date(2020, 4, 4, 22, 22, 22), '8am');
+                5, 'Some Event 1', new Date(2020, 4, 4, 22, 22, 22));
             var myEvent2: app.common.models.IMyEvent = new app.common.models.MyEvent(
-                5, 'Second event', new Date(2016, 3, 2, 11, 22, 22), '8am');
+                5, 'Second event', new Date(2016, 3, 2, 11, 22, 22));
             var myEvent3: app.common.models.IMyEvent = new app.common.models.MyEvent(
-                5, 'Another event 3', new Date(2017, 11, 10, 10, 0, 0), '8am');
+                5, 'Another event 3', new Date(2017, 11, 10, 10, 0, 0));
             var myEvent4: app.common.models.IMyEvent = new app.common.models.MyEvent(
-                5, '4th event', new Date(2016, 2, 2, 22, 0, 0), '8am');
+                5, '4th event', new Date(2016, 2, 2, 22, 0, 0));
             var myEvent5: app.common.models.IMyEvent = new app.common.models.MyEvent(
-                5, 'Fifth event', new Date(2020, 3, 22, 10, 0, 0), '8am');
+                5, 'Fifth event', new Date(2020, 3, 22, 10, 0, 0));
                 
             myEvent1.setAddress('Some Address no. 1', 'New York', 'USA');
             myEvent2.setAddress('Second Avenue 2', 'New York', 'USA');

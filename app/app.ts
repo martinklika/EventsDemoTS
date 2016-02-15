@@ -8,6 +8,7 @@
         'app.eventNew',
         'app.directives.eventThumbnail',
         'app.directives.eventThumbnailButtons',
-        'app.productList'
+        'app.productList',
+        'app.common.filters'
     ]);
 })();

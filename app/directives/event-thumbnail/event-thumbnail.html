@@ -1,8 +1,8 @@
 <div>
     <h2>{{vmThumb.name}}</h2>
     <div>
-        <span class="nodata">Date: </span> {{vmThumb.date}}
-        <span class="nodata">, Time: </span> {{vmThumb.time}}
+        <span class="nodata">Date: </span> {{vmThumb.date | date:'EEEE dd/MMMM/yyyy'}}
+        <span class="nodata">, Time: </span> {{vmThumb.date | date:'@ h:mma'}}
         <span class="nodata">, Location: </span> {{vmThumb.address.street}}, {{vmThumb.address.city}}, {{vmThumb.address.country}}
     </div>
     <br>

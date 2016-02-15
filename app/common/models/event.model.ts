@@ -5,27 +5,21 @@ module app.common.models {
         id: number;
         name: string;
         date: Date;
-        time: string;
         address?: app.common.models.IAddress;
         setName(name: string): void;
-        setAddress(street: string, city: string, country: string): void
+        setAddress(street: string, city: string, country: string): void;
     }
 
     export class MyEvent implements IMyEvent {
         id: number;
         name: string;
         date: Date;
-        time: string;
         address: app.common.models.IAddress;
 
-        constructor(id: number,
-            name: string,
-            date: Date,
-            time: string) {
+        constructor(id: number, name: string, date: Date) {
             this.id = id;
             this.name = name;
             this.date = date;
-            this.time = time;
         }
 
         setName(name: string): void {
