@@ -41,10 +41,11 @@
     <!-- Application Script -->
     <script src="app/app.js"></script>
 
-    <!-- Domain Classes -->
+    <!-- Model Classes -->
     <script src="app/common/models/address.model.js"></script>
     <script src="app/common/models/event.model.js"></script>
     <script src="app/common/models/product.model.js"></script>
+    <script src="app/common/models/presentation.model.js"></script>
 
     <!-- Services -->
     <script src="app/common/services/services.module.js"></script>
@@ -53,23 +54,33 @@
     <!-- Filters -->
     <script src="app/common/filters/filters.module.js"></script>
     <script src="app/common/filters/country.filter.js"></script>
+    <script src="app/common/filters/duration.filter.js"></script>
 
     <!-- product stuff -->
     <script src="app/product-list/product-list.module.js"></script>
     <script src="app/product-list/product-list.controller.js"></script>
 
-    <!-- Controllers etc. -->
+    <!-- Modules, Routers, Controllers etc. -->
     <script src="app/app.config.js"></script>
     <script src="app/event-list/event-list.module.js"></script>
     <script src="app/event-list/event-list.route.js"></script>
     <script src="app/event-list/event-list.controller.js"></script>
+    <script src="app/event-detail/event-detail.module.js"></script>
+    <script src="app/event-detail/event-detail.route.js"></script>
+    <script src="app/event-detail/event-detail.controller.js"></script>
     <script src="app/event-new/event-new.module.js"></script>
     <script src="app/event-new/event-new.route.js"></script>
     <script src="app/event-new/event-new.controller.js"></script>
+    <script src="app/presentation-list/presentation-list.module.js"></script>
+    <script src="app/presentation-list/presentation-list.controller.js"></script>
+        
+    <!--Directives -->
     <script src="app/directives/event-thumbnail/event-thumbnail.module.js"></script>
     <script src="app/directives/event-thumbnail/event-thumbnail.directive.js"></script>
     <script src="app/directives/event-thumbnail-buttons/event-thumbnail-buttons.module.js"></script>
     <script src="app/directives/event-thumbnail-buttons/event-thumbnail-buttons.directive.js"></script>
+    <script src="app/directives/event-presentations/event-presentations.module.js"></script>
+    <script src="app/directives/event-presentations/event-presentations.directive.js"></script>
 </body>
 
 </html>

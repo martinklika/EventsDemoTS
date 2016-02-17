@@ -31,4 +31,3 @@ module app.common.models {
         }
     }
 }
-

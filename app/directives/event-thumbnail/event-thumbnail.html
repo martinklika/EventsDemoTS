@@ -1,5 +1,5 @@
 <div>
-    <h2>{{vmThumb.name}}</h2>
+    <h2><a ng-href="/eventDetail/{{vmThumb.id}}">{{vmThumb.name}}</a></h2>
     <div>
         <span class="nodata">Date: </span> {{vmThumb.date | date:'EEEE dd/MMMM/yyyy'}}
         <span class="nodata">, Time: </span> {{vmThumb.date | date:'@ h:mma'}}

@@ -5,7 +5,7 @@ module app.eventList {
         categoryName: string;
         callHomeCounter?: number;
         events?: app.common.models.IMyEvent[];
-        setEvents(): void;
+        getEvents(): void;
         testOuterSetName(myEvent: app.common.models.IMyEvent): void;
         callHome(): void;
     }
@@ -20,11 +20,14 @@ module app.eventList {
         constructor(private dataAccessService: app.common.services.IDataAccessService) {
             this.categoryName = 'List of Events';
             this.callHomeCounter = 0;
-            this.setEvents();
+            this.getEvents();
         }
         
-        setEvents(): void {
-            this.events = this.dataAccessService.getData();
+        getEvents(): void {
+            // this.events = [];
+            // var someEvent: app.common.models.IMyEvent = this.dataAccessService.getEventById(5);
+            // this.events.push(someEvent);
+            this.events = this.dataAccessService.getEvents();
         }
         
         testOuterSetName(myEvent: app.common.models.IMyEvent): void {
