@@ -45,25 +45,25 @@ module app.common.services {
             var presentations: app.common.models.IPresentation[] = [];
 
             var presentation1: app.common.models.IPresentation = new app.common.models.Presentation(
-                1, 1, 'Session no. 1', 'Creator 1', 5, 'Advanced', 'Abstract');
+                1, 1, 'Session no. 01', 'Creator 1', 2, 'Advanced', 'Abstract');
             var presentation2: app.common.models.IPresentation = new app.common.models.Presentation(
-                2, 1, 'Session no. 2', 'Creator 1', 5, 'Basic', 'Abstract');
+                2, 1, 'Session no. 02', 'Creator 1', 3, 'Basic', 'Abstract');
             var presentation3: app.common.models.IPresentation = new app.common.models.Presentation(
-                3, 2, 'Session no. 3', 'Creator 1', 5, 'Advanced', 'Abstract');
+                3, 2, 'Session no. 03', 'Creator 1', 4, 'Advanced', 'Abstract');
             var presentation4: app.common.models.IPresentation = new app.common.models.Presentation(
-                4, 2, 'Session no. 4', 'Creator 1', 5, 'Basic', 'Abstract');
+                4, 2, 'Session no. 04', 'Creator 1', 1, 'Basic', 'Abstract');
             var presentation5: app.common.models.IPresentation = new app.common.models.Presentation(
-                5, 2, 'Session no. 5', 'Creator 1', 5, 'Intermediate', 'Abstract');
+                5, 2, 'Session no. 05', 'Creator 1', 3, 'Intermediate', 'Abstract');
             var presentation6: app.common.models.IPresentation = new app.common.models.Presentation(
-                6, 2, 'Session no. 6', 'Creator 1', 5, 'Advanced', 'Abstract');
+                6, 2, 'Session no. 06', 'Creator 1', 4, 'Advanced', 'Abstract');
             var presentation7: app.common.models.IPresentation = new app.common.models.Presentation(
-                7, 2, 'Session no. 7', 'Creator 1', 5, 'Basic', 'Abstract');
+                7, 2, 'Session no. 07', 'Creator 1', 5, 'Basic', 'Abstract');
             var presentation8: app.common.models.IPresentation = new app.common.models.Presentation(
-                8, 3, 'Session no. 8', 'Creator 1', 5, 'Advanced', 'Abstract');
+                8, 3, 'Session no. 08', 'Creator 1', 3, 'Advanced', 'Abstract');
             var presentation9: app.common.models.IPresentation = new app.common.models.Presentation(
-                9, 3, 'Session no. 9', 'Creator 1', 5, 'Basic', 'Abstract');
+                9, 3, 'Session no. 09', 'Creator 1', 2, 'Basic', 'Abstract');
             var presentation10: app.common.models.IPresentation = new app.common.models.Presentation(
-                10, 1, 'Session no. 10', 'Creator 1', 5, 'Intermediate', 'Abstract');
+                10, 1, 'Session no. 10', 'Creator 1', 1, 'Intermediate', 'Abstract');
 
             presentations.push(presentation1);
             presentations.push(presentation2);

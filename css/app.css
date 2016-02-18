@@ -101,3 +101,10 @@ input[type="text"] {
     color: lightgrey;
     border-color: black;
 }
+
+.sorttriangle:after {
+  content: '\25b2';
+}
+.sorttriangle.inverttriangle:after {
+  content: '\25bc';
+}

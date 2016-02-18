@@ -1,23 +1,48 @@
 <div>
     <h3>Presentations</h3>
+    <!-- SIMPLE version of orderBy -->    
     <!--Order By:
-    <select ng-model="sortorder" class="input-small">
+    <select ng-model="ctrlAs.sortorder" class="input-small">
         <option selected value="name">Name</option>
-        <option value="upVoteCount">Votes</option>
-    </select>
-    Show:
-    <select ng-model="query.level" class="input-medium">
-        <option selected value="">All</option>
-        <option selected value="introductory">Introductory</option>
-        <option selected value="intermediate">Intermediate</option>
-        <option selected value="advanced">Advanced</option>
+        <option value="-duration">Duration</option>
+        <option value="level">Level</option>
     </select>-->
     
+    <br> Another order by:
+    <button class="btn nodata2" ng-click="ctrlAs.predicate=''"><i>Set to unsorted</i></button> -
+    <button class="btn nodata2" ng-click="ctrlAs.order('name')">Name
+        <span class="sorttriangle" ng-show="ctrlAs.predicate === 'name'" ng-class="{inverttriangle:ctrlAs.reverse}"></span>
+    </button>
+    <button class="btn nodata2" ng-click="ctrlAs.order('level')">Level
+        <span class="sorttriangle" ng-show="ctrlAs.predicate === 'level'" ng-class="{inverttriangle:ctrlAs.reverse}"></span>
+    </button>
+    <button class="btn nodata2" ng-click="ctrlAs.order('duration')">Duration
+        <span class="sorttriangle" ng-show="ctrlAs.predicate === 'duration'" ng-class="{inverttriangle:ctrlAs.reverse}"></span>
+    </button>
+    predicate = {{ctrlAs.predicate}}; reverse = {{ctrlAs.reverse}}
+    <br>
+
+    <!-- query EXPLANATION - Angular built-in filtering option
+                    only shows records that have the value (e.g. advanced) inside them
+                    however even if they are shown in titles, text etc. -->
+    <!-- query.level - dtto, but only searches in the fields called level -->
+    Show only (using ng-model query and in ng-repeat filter:query):
+    <select ng-model="ctrlAs.query.level" class="input-medium">
+        <option selected value="">All</option>
+        <option selected value="basic">Basic</option>
+        <option selected value="intermediate">Intermediate</option>
+        <option selected value="advanced">Advanced</option>
+    </select>
+
     <!-- categoryName is a direct property of $scope standard-ish angular way -->
     <h2>{{categoryName}} - for event: {{scopeOptionProperty1.name}}</h2>
     <ul class="thumbnails">
-        <!--<li ng-repeat="session in vm.sessions | orderBy:sortorder | filter:query" class="span11" id="session{{session.id}}">-->
-        <li ng-repeat="session in controllerAsAlias.presentations" class="span11" id="session{{session.id}}">
+        
+        <!-- SIMPLE version of orderBy -->
+        <!--<li ng-repeat="session in ctrlAs.presentations 
+            | orderBy:ctrlAs.sortorder | filter:ctrlAs.query" class="span11" id="session{{session.id}}">-->
+        <li ng-repeat="session in ctrlAs.presentations 
+            | orderBy:ctrlAs.predicate:ctrlAs.reverse | filter:ctrlAs.query" class="span11" id="session{{session.id}}">
             <div class="row session">
                 <upvote upvote="upVoteSession(session)" downvote="downVoteSession(session)" count="session.upVoteCount" />
 
@@ -29,7 +54,6 @@
                         <br />
                         <span>Level: {{session.level}}</span>
                         <p>{{session.abstract}}</p>
-
                     </collapsible>
                 </div>
             </div>

@@ -14,7 +14,7 @@ module app.directives.eventPresentations {
             replace: true,
             templateUrl: 'app/directives/event-presentations/event-presentations.html',
             controller: 'PresentationListController',
-            controllerAs: 'controllerAsAlias',
+            controllerAs: 'ctrlAs',
             scope: {
                 scopeOptionProperty1: '=valueOfScopeOptionProperty1'
             }
